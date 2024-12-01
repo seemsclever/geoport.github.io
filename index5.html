@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenLayers + GeoServer: Управление слоями</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js" type="text/javascript"></script>
+    <script src="script4.js" type="text/javascript" defer></script>
+</head>
+<body>
+
+<!-- Шапка страницы -->
+<header>
+    <div class="header-left">
+        <div class="logo">
+            <img src="src/uunitLogo2.png" alt="Логотип" />
+        </div>
+        <div class="university-name">
+            <h2>Уфимский университет</h2>
+            <h2>науки и технологий</h2>
+        </div>
+    </div>
+    <h1>Геопортал</h1>
+</header>
+
+<!-- Основной контейнер для карты и боковых элементов -->
+<div id="main-container">
+    <!-- Панель управления слоями -->
+    <div id="layer-control">
+        <h3>Управление слоями</h3>
+        <!-- Группа: 6-301 -->
+        <div id="group6301-group-container">
+        <details >
+            <summary>
+                <input type="checkbox" id="group6301-group" checked>
+                <label for="group6301-group">6-301</label>
+            </summary>
+            <ul>
+                <li>
+                    <input type="checkbox" id="layer1" checked>
+                    <label for="layer1">
+                        <img src="" class="layer-icon" data-layer="diplom:6-301_Узлы сети">
+                        6-301 Узлы сети
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="layer2" checked>
+                    <label for="layer2">
+                        <img src="" class="layer-icon" data-layer="diplom:6-301_Компьютеры">
+                        6-301 Компьютеры
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="layer3" checked>
+                    <label for="layer3">
+                        <img src="" class="layer-icon" data-layer="diplom:6-301_Мониторы">
+                        6-301 Мониторы
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="layer4" checked>
+                    <label for="layer4">
+                        <img src="" class="layer-icon" data-layer="diplom:6-301_Удлинители">
+                        6-301 Удлинители
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="layer5" checked>
+                    <label for="layer5">
+                        <img src="" class="layer-icon" data-layer="diplom:6-301_Розетки">
+                        6-301 Розетки
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="layer6" checked>
+                    <label for="layer6">
+                        <img src="" class="layer-icon" data-layer="diplom:6-301_Локальные сети">
+                        6-301 Локальные сети
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="layer7" checked>
+                    <label for="layer7">
+                        <img src="" class="layer-icon" data-layer="diplom:6-301_Граница">
+                        6-301 Граница
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="layer8" checked>
+                    <label for="layer8">
+                        <img src="" class="layer-icon" data-layer="diplom:6-301_Электрические сети">
+                        6-301 Электрические сети
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="layer9" checked>
+                    <label for="layer9">
+                        <img src="" class="layer-icon" data-layer="diplom:6-301_Столы">
+                        6-301 Столы
+                    </label>
+                </li>
+            </ul>
+        </details>
+        </div>
+        <!-- Группа: 6-302 -->
+        <div id="group6302-group-container">
+            <details >
+                <summary>
+                    <input type="checkbox" id="group6302-group" checked>
+                    <label for="group6302-group">6-302</label>
+                </summary>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="layer21" checked>
+                        <label for="layer21">
+                            <img src="" class="layer-icon" data-layer="diplom:6-302_Граница">
+                            6-302 Граница
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="layer22" checked>
+                        <label for="layer22">
+                            <img src="" class="layer-icon" data-layer="diplom:6-302_Компьютеры">
+                            6-302 Компьютеры
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="layer23" checked>
+                        <label for="layer23">
+                            <img src="" class="layer-icon" data-layer="diplom:6-302_Локальные сети">
+                            6-302 Локальные сети
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="layer24" checked>
+                        <label for="layer24">
+                            <img src="" class="layer-icon" data-layer="diplom:6-302_Мониторы">
+                            6-302 Мониторы
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="layer25" checked>
+                        <label for="layer25">
+                            <img src="" class="layer-icon" data-layer="diplom:6-302_Принтеры">
+                            6-302 Принтеры
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="layer26" checked>
+                        <label for="layer26">
+                            <img src="" class="layer-icon" data-layer="diplom:6-302_Розетки">
+                            6-302 Розетки
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="layer27" checked>
+                        <label for="layer27">
+                            <img src="" class="layer-icon" data-layer="diplom:6-302_Столы">
+                            6-302 Столы
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="layer28" checked>
+                        <label for="layer28">
+                            <img src="" class="layer-icon" data-layer="diplom:6-302_Удлинители">
+                            6-302 Удлинители
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="layer29" checked>
+                        <label for="layer29">
+                            <img src="" class="layer-icon" data-layer="diplom:6-302_Узлы сети">
+                            6-302 Узлы сети
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="layer30" checked>
+                        <label for="layer30">
+                            <img src="" class="layer-icon" data-layer="diplom:6-302_Шкафы">
+                            6-302 Шкафы
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="layer31" checked>
+                        <label for="layer31">
+                            <img src="" class="layer-icon" data-layer="diplom:6-302_Электрические сети">
+                            6-302 Электрические сети
+                        </label>
+                    </li>
+                </ul>
+            </details>
+        </div>
+
+        <!-- Группа: 6-303 -->
+        <div id="group6303-group-container">
+            <details>
+                <summary>
+                    <input type="checkbox" id="group6303-group" checked>
+                    <label for="group6303-group">6-303</label>
+                </summary>
+                <ul>
+
+                </ul>
+            </details>
+        </div>
+
+        <!-- Группа: 6-309 -->
+        <div id="group6309-group-container">
+            <details>
+                <summary>
+                    <input type="checkbox" id="group6309-group" checked>
+                    <label for="group6309-group">6-309</label>
+                </summary>
+                <ul>
+
+                </ul>
+            </details>
+        </div>
+        <!-- Группа: 3 этаж -->
+        <div id="group3etazh-group-container">
+            <details >
+                <summary>
+                    <input type="checkbox" id="etazh3-group" checked>
+                    <label for="etazh3-group">3 этаж</label>
+                </summary>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="layer10" checked>
+                        <label for="layer10">
+                            <img src="" class="layer-icon" data-layer="diplom:6 корпус 3 этаж коммуникации-3 водоп">
+                            Водопровод
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="layer11" checked>
+                        <label for="layer11">
+                            <img src="" class="layer-icon" data-layer="diplom:6 корпус 3 этаж коммуникации-3 отопл">
+                            Отопление
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="layer12" checked>
+                        <label for="layer12">
+                            <img src="" class="layer-icon" data-layer="diplom:6 корпус 3 этаж коммуникации-3 элек1">
+                            Электрические коммуникации 1
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="layer13" checked>
+                        <label for="layer13">
+                            <img src="" class="layer-icon" data-layer="diplom:6 корпус 3 этаж коммуникации-3 элек2">
+                            Электрические коммуникации 2
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="layer14" checked>
+                        <label for="layer14">
+                            <img src="" class="layer-icon" data-layer="diplom:6 корпус 3 этаж-3 окна">
+                            Окна
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="layer15" checked>
+                        <label for="layer15">
+                            <img src="" class="layer-icon" data-layer="diplom:6 корпус 3 этаж-3 двери">
+                            Двери
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="layer16" checked>
+                        <label for="layer16">
+                            <img src="" class="layer-icon" data-layer="diplom:6 корпус 3 этаж-3 аудитории">
+                            Аудитории
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="layer17" checked>
+                        <label for="layer17">
+                            <img src="" class="layer-icon" data-layer="diplom:6 корпус 3 этаж-3 лестница">
+                            Лестницы
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="layer18" checked>
+                        <label for="layer18">
+                            <img src="" class="layer-icon" data-layer="diplom:6 корпус 3 этаж-3 стены внутренние">
+                            Внутренние стены
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="layer19" checked>
+                        <label for="layer19">
+                            <img src="" class="layer-icon" data-layer="diplom:6 корпус 3 этаж-3 стены наружные">
+                            Наружные стены
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="layer20" checked>
+                        <label for="layer20">
+                            <img src="" class="layer-icon" data-layer="diplom:6 корпус 3 этаж-3 пол">
+                            Полы
+                        </label>
+                    </li>
+                </ul>
+            </details>
+        </div>
+        <!-- Перемещение кнопки ниже -->
+        <button id="download-geojson">Скачать GeoJSON</button>
+        <!-- Модальное окно для выбора слоев -->
+        <div id="layer-selection-modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-button" id="close-modal">&times;</span>
+                <h2>Выберите слои для скачивания</h2>
+
+                <!-- Группа: 6-301 -->
+                <details>
+                    <summary>
+                        <input type="checkbox" class="toggle-group" id="group6301-group-download">
+                        <label for="group6301-group-download">6-301</label>
+                    </summary>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="diplom:6-301_Граница">
+                                6-301 Граница
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="diplom:6-301_Компьютеры">
+                                6-301 Компьютеры
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="diplom:6-301_Локальные сети">
+                                6-301 Локальные сети
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="diplom:6-301_Мониторы">
+                                6-301 Мониторы
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="diplom:6-301_Розетки">
+                                6-301 Розетки
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="diplom:6-301_Столы">
+                                6-301 Столы
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="diplom:6-301_Удлинители">
+                                6-301 Удлинители
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="diplom:6-301_Электрические сети">
+                                6-301 Электрические сети
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="diplom:6-301_Узлы сети">
+                                6-301 Узлы сети
+                            </label>
+                        </li>
+                    </ul>
+                </details>
+                <!-- Группа: 6-302 -->
+                <details>
+                    <summary>
+                        <input type="checkbox" class="toggle-group" id="group6302-group-download">
+                        <label for="group6302-group-download">6-302</label>
+                    </summary>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="diplom:6-302_Граница">
+                                6-302 Граница
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="diplom:6-302_Компьютеры">
+                                6-302 Компьютеры
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="diplom:6-302_Локальные сети">
+                                6-302 Локальные сети
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="diplom:6-302_Мониторы">
+                                6-302 Мониторы
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="diplom:6-302_Принтеры">
+                                6-302 Принтеры
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="diplom:6-302_Розетки">
+                                6-302 Розетки
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="diplom:6-302_Столы">
+                                6-302 Столы
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="diplom:6-302_Удлинители">
+                                6-302 Удлинители
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="diplom:6-302_Электрические сети">
+                                6-302 Электрические сети
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="diplom:6-302_Узлы сети">
+                                6-302 Узлы сети
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="diplom:6-302_Шкафы">
+                                6-302 Шкафы
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="diplom:6-302_Электрические сети">
+                                6-302 Электрические сети
+                            </label>
+                        </li>
+                    </ul>
+                </details>
+                <!-- Группа: 6-303 -->
+                <details>
+                    <summary>
+                        <input type="checkbox" class="toggle-group" id="group6303-group-download">
+                        <label for="group6309-group-download">6-303</label>
+                    </summary>
+                </details>
+                <!-- Группа: 6-309 -->
+                <details>
+                    <summary>
+                        <input type="checkbox" class="toggle-group" id="group6309-group-download">
+                        <label for="group6309-group-download">6-309</label>
+                    </summary>
+                </details>
+                <!-- Группа: 3 этаж -->
+                <details>
+                    <summary>
+                        <input type="checkbox" class="toggle-group" id="group3etazh-group-download">
+                        <label for="group3etazh-group-download">3 этаж</label>
+                    </summary>
+                </details>
+                <button id="download-selected-layers">Скачать выделенные слои</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Карта -->
+    <div id="map"></div>
+
+    <!-- Атрибуты объекта -->
+    <div id="attributes">
+        <div id="object-attributes">
+            <h3>Атрибуты объекта</h3>
+            <p>Здесь будут атрибуты выбранного объекта.</p>
+        </div>
+        <div id="documents">
+            <h3>Приложение</h3>
+            <p>Здесь будут отображены фотографии и документы.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
